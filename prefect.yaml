@@ -1,0 +1,11 @@
+deployments:
+  - name: x-query-daily
+    flow_name: x_query_flow
+    entrypoint: "x_query_flow.py:x_query_flow"
+    path: "C:/CryptoBot"
+    schedule:
+      cron: "0 8 * * *"
+    work_pool_name: "default"
+    storage:
+      type: "local-file-system"
+      basepath: "C:/CryptoBot"
